@@ -21,7 +21,7 @@ void updateClock() {
             String currentTime = getCurrentTime();
             display.setCursor(10, 40);
             display.print("Current Time:");
-            display.setCursor(10,60);
+            display.setCursor(10, 60);
             display.print(currentTime);
         }else{
             display.setCursor(10, 40);

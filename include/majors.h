@@ -10,6 +10,8 @@ struct MajorConfig{
     const char* name;
     int strength;
     int intelligence;
+    int dexterity;
+    
     const char* spellName;
    // const char* spellDesc; <------ not sure if we have enough room on the screen for a spell description, but we can add later
 };
