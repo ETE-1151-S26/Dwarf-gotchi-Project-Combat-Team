@@ -1,3 +1,3 @@
 #include <WiFi.h>
-#define WIFI_SSID "ckhaus" //YOUR_SSID
-#define WIFI_PASSWORD "wifickay2022" //YOUR_PASSWORD
+#define WIFI_SSID "YOUR_SSID" //YOUR_SSID
+#define WIFI_PASSWORD "YOUR_PASSWORD" //YOUR_PASSWORD

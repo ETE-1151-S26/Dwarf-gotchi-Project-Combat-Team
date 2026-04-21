@@ -24,7 +24,7 @@ String getCurrentTime(){
     }
 
     char timeStringBuff[20]; //temporary buffer for storing time
-    strftime(timeStringBuff, sizeof(timeStringBuff), "%H:%M %p", &timeinfo); //%H: hour, %M: minute, %p: AM or PM
+    strftime(timeStringBuff, sizeof(timeStringBuff), "%I:%M %p", &timeinfo); //%I: hour, %M: minute, %p: AM or PM
     return String(timeStringBuff);
 
 }
