@@ -45,8 +45,9 @@
 #define GxEPD2_DISPLAY_CLASS GxEPD2_BW
 #define GxEPD2_DRIVER_CLASS  GxEPD2_213_BN   // 122x250, SSD1680
 
-GxEPD2_BW<GxEPD2_213_BN, GxEPD2_213_BN::HEIGHT>
-    display(GxEPD2_213_BN(EPD_CS, EPD_DC, EPD_RST, EPD_BUSY));
+//GxEPD2_BW<GxEPD2_213_BN, GxEPD2_213_BN::HEIGHT>
+   // display(GxEPD2_213_BN(EPD_CS, EPD_DC, EPD_RST, EPD_BUSY));
+extern GxEPD2_BW<GxEPD2_213_BN, GxEPD2_213_BN::HEIGHT> display; //remove this line and uncomment two lines above to return to original
 
 // ── Button / encoder GPIOs ───────────────────────────────────
 // Based on CrowPanel e-paper series schematic
