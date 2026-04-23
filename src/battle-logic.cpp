@@ -21,6 +21,12 @@ int computeDamage(const Fighter& attacker, const Fighter& defender, const Move& 
 
 void applyMove(Fighter* attacker, Fighter* defender, Move* move, RNG& rng, int difficultyLevel = 0, bool isPlayerDefender = false) {
 
+//Pointers used intentionally so HP and buffs update the real fighters.
+std::cout << attacker->name << " used " << move->name << "!\n";
+
+//If the move is an attack, crit chance is checked, and damage is computed and applied to the enemy
+//If the move is a heal, the player heals for the move's power, up to their max HP
+//If the move is a defend, the player's defense buff increases by the move's power for the rest of the battle
 switch (move->kind) {
         case MoveKind::Attack: {
 
@@ -64,6 +70,7 @@ Move* chooseEnemyMove(Fighter* enemy, RNG& rng) {
 void printHPBar(const Fighter& f) {
 
 //Simple bar of 20 blocks
+//Temporary while we don't have a screen to display an actual bar
     const int barWidth = 20;
     int filled = (f.maxHP > 0) ? (f.hp * barWidth) / f.maxHP : 0;
     if (filled < 0) filled = 0;
@@ -136,7 +143,7 @@ void battle(Fighter* player, Fighter* enemy, RNG& rng, int difficultyLevel) {
         //Shows moves and prompts player to choose one, or picks a random move for the enemy, depending on who goes first.
         if (playerFirst) {
             showMoves(*player);
-            int choice = promptChoiceInt("Enter 1-4: ", 1, 4);
+            int choice = promptChoiceInt("Enter 1-3: ", 1, 3);
             Move* playerMove = &player->moves[choice - 1]; // pointer to chosen move
             applyMove(player, enemy, playerMove, rng, 0, false); // Player attacks, no dodge for enemy
             if (enemy->hp <= 0) break;
@@ -149,7 +156,7 @@ void battle(Fighter* player, Fighter* enemy, RNG& rng, int difficultyLevel) {
             if (player->hp <= 0) break;
 
             showMoves(*player);
-            int choice = promptChoiceInt("Enter 1-4: ", 1, 4);
+            int choice = promptChoiceInt("Enter 1-3: ", 1, 3);
             Move* playerMove = &player->moves[choice - 1];
             applyMove(player, enemy, playerMove, rng, 0, false); // Player attacks, no dodge for enemy
         }
