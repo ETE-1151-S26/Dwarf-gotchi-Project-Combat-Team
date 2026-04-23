@@ -2,5 +2,8 @@
 #include <iostream>
 #include <string>
 #include "PVPCombat.h"
-int test = 0;
+
+int attack(int str, int intel, int dex){
+    
+}
 

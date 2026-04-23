@@ -4,6 +4,7 @@
 #include "WiFiHandler.h"
 #include "view_clock.h"
 
+//CONNECT TO WIFI BY INPUTTING CREDENTIALS IN "WiFiCredentials.h" FILE
 //gemini suggested fix to my problems (also updated lines in conif.h):
 GxEPD2_BW<GxEPD2_213_BN, GxEPD2_213_BN::HEIGHT>
     display(GxEPD2_213_BN(EPD_CS, EPD_DC, EPD_RST, EPD_BUSY));
