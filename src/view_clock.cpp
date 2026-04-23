@@ -2,9 +2,9 @@
 #include <time.h>
 #include "config.h"
 
-//Configure for time zone
+//Configure for time zone. CA Is UTC -7
 const char* ntpServer = "pool.ntp.org";
-const long gmtOffset_sec = -25200; //UTC-7 (ultiply 7 * 3600 seconds (1hour))
+const long gmtOffset_sec = -25200; //UTC -7 (ultiply 7 * 3600 seconds (1hour))
 const int daylightOffset_sec = 0;
 
 void initClock() {
