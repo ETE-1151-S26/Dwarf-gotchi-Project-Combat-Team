@@ -4,6 +4,7 @@
 #include <string>
 #include <Arduino.h>
 
+//REFER TO "major-stats.h" AND "major-stats.cpp" THIS IS AN OLD FILE. 
 
 struct MajorConfig{
     const char* name;
