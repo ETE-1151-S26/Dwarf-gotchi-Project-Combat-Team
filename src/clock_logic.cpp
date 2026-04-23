@@ -1,4 +1,4 @@
-#include "view_clock.h"
+#include "clock_logic.h"
 #include <time.h>
 #include "config.h"
 

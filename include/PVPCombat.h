@@ -5,7 +5,7 @@
 #include <string>
 #include <Arduino.h>
 
-int attack
+int attack;
 
 
 

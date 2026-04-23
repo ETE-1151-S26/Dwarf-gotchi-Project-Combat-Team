@@ -1,4 +1,4 @@
-#include "view_timer.h"
+#include "timer_logic.h"
 
 Timer::Timer(unsigned long ms){
     duration = ms;

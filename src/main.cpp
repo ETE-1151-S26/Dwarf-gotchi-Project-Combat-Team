@@ -2,7 +2,7 @@
 #include <Adafruit_GFX.h>
 #include "config.h"
 #include "WiFiHandler.h"
-#include "view_clock.h"
+#include "clock_logic.h"
 
 //CONNECT TO WIFI BY INPUTTING CREDENTIALS IN "WiFiCredentials.h" FILE
 //gemini suggested fix to my problems (also updated lines in conif.h):
