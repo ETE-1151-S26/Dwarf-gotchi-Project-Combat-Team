@@ -2,32 +2,7 @@
 #define BATTLE-LOGIC_HPP
 #include <random>
 #include <string>
-
-//MOVEKIND IS AN ENUM CLASS THAT DEFINES THE KIND OF MOVE, WHETHER IT BE AN ATTACK, HEAL OR DEFEND
-enum class MoveKind {Attack, Heal, Defend};
-
-//MOVE STRUCTURE DEFINES THE NAME OF THE MOVE, ITS KIND, POWER, ACCURACY AND CRIT CHANCE
-struct Move {
-	std::string name;
-	MoveKind kind;
-	int power;
-	int critChance; // 0-100
-};
-
-//FIGHTER STRUCTURE DEFINES THE NAME, CLASSNAME, HP, ATK, DEF, SPD, A TEMPORARY DEFENSE BUFF, AND AN ARRAY OF MOVES
-struct Fighter {
-	std::string name;
-	std::string className;
-
-	int maxHP;
-	int hp;
-	int atk;
-	int def;
-	int spd;
-    int defBuff;
-	Move moves[3];
-
-};
+#include "major-stats.h"
 
 //RNG STRUCT FOR RANDOM NUMBER GENERATION
 struct RNG {

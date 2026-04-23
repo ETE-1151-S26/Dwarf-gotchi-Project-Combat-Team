@@ -1,5 +1,6 @@
 #include <iostream>
 #include "battle-logic.h"
+#include "major-stats.h"
 
 int computeDamage(const Fighter& attacker, const Fighter& defender, const Move& move, bool crit) {
 
