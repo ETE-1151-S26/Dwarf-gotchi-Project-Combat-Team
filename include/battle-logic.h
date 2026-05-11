@@ -26,6 +26,9 @@ struct RNG {
 //FUNCTION DISPLAYS THE BATTLE BETWEEN THE PLAYER AND AN ENEMY
 void battle(Fighter* player, Fighter* enemy);
 
+//FUNCTION TO RUN THE MAIN GAME LOOP
+int battleLoop(Fighter& player, Fighter enemies[1], RNG& rng);
+
 //FUNCTION TO PROMPT THE USER TO CHOOSE A MOVE, WITH VALIDATION.
 int promptChoiceInt(const std::string& prompt, int minVal, int maxVal);
 
@@ -41,9 +44,13 @@ void clearInputLine();
 //FUNCTION TO PICK A RANDOM MOVE FOR THE ENEMY.
 Move* chooseEnemyMove(Fighter* enemy, RNG& rng);
 
-//FUNCTION TO COMPUTE THE DAMAGE OF AN ATTACK MOVE, TAKING INTO ACCOUNT THE ATTACKER'S ATK,
+//FUNCTION TO COMPUTE THE DAMAGE OF A PHYSICAL ATTACK MOVE, TAKING INTO ACCOUNT THE ATTACKER'S ATK,
 //THE DEFENDER'S DEF (INCLUDING BUFFS), THE MOVE'S POWER, AND WHETHER IT'S A CRITICAL HIT.
-int computeDamage(const Fighter& attacker, const Fighter& defender, const Move& move, bool crit);
+int computephysDamage(const Fighter& attacker, const Fighter& defender, const Move& move, bool crit);
+
+//FUNCTION TO COMPUTE THE DAMAGE OF A MAGIC ATTACK MOVE, TAKING INTO ACCOUNT THE ATTACKER'S INTELLIGENCE,
+//THE DEFENDER'S MAGIC DEFENSE (INCLUDING BUFFS), THE MOVE'S POWER, AND WHETHER IT'S A CRITICAL HIT.
+int computemagDamage(const Fighter& attacker, const Fighter& defender, const Move& move, bool crit);
 
 //FUNCTION TO APPLY A MOVE FROM ONE FIGHTER TO ANOTHER
 void applyMove(Fighter* user, Fighter* target, Move* move, RNG& rng);

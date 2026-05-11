@@ -2,8 +2,8 @@
 #define MAJOR_STATS_H
 #include <string>
 
-//MOVEKIND IS AN ENUM CLASS THAT DEFINES THE KIND OF MOVE, WHETHER IT BE AN ATTACK, HEAL OR DEFEND
-enum class MoveKind {Attack, Heal, Defend};
+//MOVEKIND IS AN ENUM CLASS THAT DEFINES THE KIND OF MOVE, WHETHER IT BE AN ATTACK, MAGICAL ATTACK OR DEFEND
+enum class MoveKind {Attack, MagAttack, Defend};
 
 //MOVE STRUCTURE DEFINES THE NAME OF THE MOVE, ITS KIND, PHYSICAL POWER, MAGICAL POWER, AND CRIT CHANCE
 struct Move {
@@ -11,7 +11,7 @@ struct Move {
 	MoveKind kind;
 	int power;
     int magpower;
-	int critChance; // 0-100 (only used for Attack)
+	int critChance; //0-100
 };
 
 //FIGHTER STRUCTURE DEFINES THE NAME, CLASSNAME, HP, ATK, INTEL, DEF, SPD, A TEMPORARY DEFENSE BUFF, AND AN ARRAY OF MOVES
@@ -30,6 +30,8 @@ struct Fighter {
 
 };
 
-Fighter compsci(const std::string& playerName);
+Fighter compsci();
+
+Fighter emset();
 
 #endif
