@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "battle-logic.h"
 #include "major-stats.h"
 
@@ -189,6 +190,10 @@ void battle(Fighter* player, Fighter* enemy, RNG& rng) {
         std::cout << "\n" << enemy->name << " was defeated!\n";
     }
 
+}
+
+void clearInputLine() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 int battleLoop(Fighter& player, Fighter enemies[1], RNG& rng) {

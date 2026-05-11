@@ -10,7 +10,9 @@ int main() {
     Fighter enemies[1];
  
     player = engineering();
-    enemies[0] = compsci();
+    player.name = "Player";
+    enemies[0] = naturalScience();
+    enemies[0].name = "Enemy";
     
     RNG rng;
     battleLoop(player, enemies, rng);
