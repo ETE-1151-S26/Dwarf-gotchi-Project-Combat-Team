@@ -6,12 +6,10 @@
 
 int main() {
 
-    
-//Creates player based on class selection
     Fighter player{};
     Fighter enemies[1];
  
-    player = emset();
+    player = engineering();
     enemies[0] = compsci();
     
     RNG rng;

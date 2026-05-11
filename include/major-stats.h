@@ -32,6 +32,8 @@ struct Fighter {
 
 Fighter compsci();
 
-Fighter emset();
+Fighter engineering();
+
+Fighter education();
 
 #endif
