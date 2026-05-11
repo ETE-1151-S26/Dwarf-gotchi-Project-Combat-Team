@@ -26,8 +26,6 @@ struct RNG {
 
 //FUNCTION DISPLAYS THE BATTLE BETWEEN THE PLAYER AND AN ENEMY
 void battle(Fighter* player, Fighter* enemy);
-
-//FUNCTION TO RUN THE MAIN GAME LOOP
 int battleLoop(Fighter& player, Fighter enemies[1], RNG& rng);
 
 //FUNCTION TO PROMPT THE USER TO CHOOSE A MOVE, WITH VALIDATION.
