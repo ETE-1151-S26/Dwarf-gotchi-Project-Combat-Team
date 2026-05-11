@@ -70,5 +70,19 @@ Fighter education(const std::string& playerName){
     f.moves[2] = {"Block", MoveKind::Defend, 4, 0};
 
     return f;
+};
 
-}
+Fighter computing_and_information(const std::string& playerName){
+    Fighter f{};
+    f.name = playerName;
+    f.className = "Computing and Information";
+    f.maxHP = 120; f.hp = 120;
+    f.atk = 14; f.intel = 12; f.def = 10; f.spd = 7;
+    f.defBuff= 0;
+
+    f.moves[0] = {"Physical Attack", MoveKind::Attack, 18,10};
+    f.moves[1] = {"Magical Attack", MoveKind::Attack, 14, 10};
+    f.moves[2] = {"Block", MoveKind::Defend, 6, 0};
+
+    return f;
+};

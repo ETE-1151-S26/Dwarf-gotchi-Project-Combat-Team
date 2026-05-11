@@ -30,9 +30,12 @@ struct Fighter {
 
 };
 
-Fighter comsci(const std::string& playerName);
+Fighter compsci(const std::string& playerName);
 
 Fighter engineering(const std::string& playerName);
 
+Fighter education(const std::string& playerName);
+
+Fighter computing_and_information(const std::string& playerName);
 
 #endif
