@@ -31,7 +31,7 @@ int computemagDamage(const Fighter& attacker, const Fighter& defender, const Mov
     if (base < 1) base = 1;
 
     if (crit) {
-        base = (base * 3) / 2; // 1.5x
+        base = (base * 3) / 2; //1.5x
         if (base < 1) base = 1;
     }
 
@@ -112,7 +112,7 @@ void showMoves(const Fighter& player) {
 
 //Displays the player's moves with their stats, and prompts the player to choose one.
     std::cout << "\nChoose a move:\n";
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 3; i++) {
         const Move& m = player.moves[i];
         std::cout << "  " << (i + 1) << ") " << m.name;
 
@@ -148,7 +148,7 @@ void battle(Fighter* player, Fighter* enemy, RNG& rng) {
     std::cout << "ENCOUNTER: " << enemy->name << " appears!\n";
     std::cout << "==============================\n";
 
-    // Reset temporary buffs at battle start
+    //Reset temporary buffs at battle start
     player->defBuff = 0;
     enemy->defBuff = 0;
 
@@ -198,15 +198,15 @@ void clearInputLine() {
 
 int battleLoop(Fighter& player, Fighter enemies[1], RNG& rng) {
 
-    // loop over predefined enemies; rng provided by caller
+    //loop over predefined enemies; rng provided by caller
     for (int i = 0; i < 1; i++) {
 
-        // This is a pointer to the enemy
+        //This is a pointer to the enemy
         //Fighter points to a fighter
         //enemies[i] fighter object at index i where i = 0,1,or 2
         Fighter* currentEnemy = &enemies[i];
 
-        // Ensure enemy HP is reset (when retry activated)
+        //Ensure enemy HP is reset (when retry activated)
         currentEnemy->hp = currentEnemy->maxHP;
         currentEnemy->defBuff = 0;
 
