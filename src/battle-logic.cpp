@@ -144,7 +144,7 @@ int promptChoiceInt(const std::string& prompt, int minVal, int maxVal) {
 void battle(Fighter* player, Fighter* enemy, RNG& rng) {
 
     std::cout << "\n==============================\n";
-    std::cout << "ENCOUNTER: " << enemy->name << " appears!\n";
+    std::cout << "AN ENEMY APPROACHES!\n";
     std::cout << "==============================\n";
 
     //Reset temporary buffs at battle start
