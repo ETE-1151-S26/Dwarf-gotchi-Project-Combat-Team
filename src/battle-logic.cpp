@@ -13,7 +13,7 @@ int computephysDamage(const Fighter& attacker, const Fighter& defender, const Mo
     if (base < 1) base = 1;
 
     if (crit) {
-        base = (base * 3) / 2; // 1.5x
+        base = (base * 3) / 2; //1.5x
         if (base < 1) base = 1;
     }
 
@@ -41,7 +41,6 @@ int computemagDamage(const Fighter& attacker, const Fighter& defender, const Mov
 
 void applyMove(Fighter* attacker, Fighter* defender, Move* move, RNG& rng) {
 
-//Pointers used intentionally so HP and buffs update the real fighters.
 std::cout << attacker->name << " used " << move->name << "!\n";
 
 //If the move is an attack or magic attack, crit chance is checked, and damage is computed and applied to the enemy
