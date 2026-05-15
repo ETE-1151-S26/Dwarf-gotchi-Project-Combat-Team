@@ -1,6 +1,7 @@
 #ifndef MAJOR_STATS_H
 #define MAJOR_STATS_H
 #include <string>
+#include "combat-mode.h"
 
 //MOVEKIND IS AN ENUM CLASS THAT DEFINES THE KIND OF MOVE, WHETHER IT BE AN ATTACK, MAGICAL ATTACK OR DEFEND
 enum class MoveKind {Attack, MagAttack, Defend};
@@ -26,7 +27,12 @@ struct Fighter {
 	int def;
 	int spd;
     int defBuff;
-	Move moves[3];
+	//base stats. These are used for calculations involving level and combat mode buffs
+	int baseAtk;
+	int baseDef;
+	int baseSpd;
+	Move moves[3]; //each fighter has three moves: block, attack, magic attack
+	ModeManager mode; //
 
 };
 
