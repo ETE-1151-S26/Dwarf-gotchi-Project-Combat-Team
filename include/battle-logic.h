@@ -1,14 +1,15 @@
-#ifndef BATTLE-LOGIC_HPP
-#define BATTLE-LOGIC_HPP
+#ifndef BATTLE_LOGIC_H
+#define BATTLE_LOGIC_H
 #include <random>
 #include <string>
+#include <chrono>
 #include "major-stats.h"
 
 //RNG STRUCT FOR RANDOM NUMBER GENERATION
 struct RNG {
 
 	std::mt19937 gen;
-	RNG() : gen(std::random_device{}()) {}
+	RNG() : gen(std::chrono::system_clock::now().time_since_epoch().count()) {}  //Fixed seed for testing
 
 	int rollInt(int lo, int hi) {
 		std::uniform_int_distribution<int> dist(lo, hi);
@@ -25,6 +26,8 @@ struct RNG {
 
 //FUNCTION DISPLAYS THE BATTLE BETWEEN THE PLAYER AND AN ENEMY
 void battle(Fighter* player, Fighter* enemy);
+
+//FUNCTION ALLOWS THE PLAYER TO FIGHT A SERIES OF ENEMIES, IF NEEDED
 int battleLoop(Fighter& player, Fighter enemies[1], RNG& rng);
 
 //FUNCTION TO PROMPT THE USER TO CHOOSE A MOVE, WITH VALIDATION.

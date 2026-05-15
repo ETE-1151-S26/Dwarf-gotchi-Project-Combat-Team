@@ -36,9 +36,9 @@ struct Fighter {
 
 };
 
-Fighter compsci();
-
 Fighter engineering();
+
+Fighter naturalScience();
 
 Fighter education();
 
