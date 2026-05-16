@@ -22,15 +22,17 @@ struct Fighter {
 
 	int maxHP;
 	int hp;
-	int atk;
-	int intel;
-	int def;
+	int atk; //str value
+	int intel; //magic attack
+	int def; //block
 	int spd;
     int defBuff;
 	//base stats. These are used for calculations involving level and combat mode buffs
 	int baseAtk;
 	int baseDef;
 	int baseSpd;
+	int baseIntel;
+	int baseHP;
 	Move moves[3]; //each fighter has three moves: block, attack, magic attack
 	ModeManager mode; //
 

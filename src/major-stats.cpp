@@ -15,7 +15,7 @@ Fighter engineering() {
     f.defBuff= 0;
 
     //base stats, used for level and combat mode calculations
-    f.baseAtk = 16; f.baseDef = 12; f.baseSpd = 8;
+    f.baseAtk = 16; f.baseDef = 12; f.baseSpd = 8; f.baseIntel = 10; f.baseHP = 130;
 
     f.moves[0] = {"Physical Attack", MoveKind::Attack, 20,10};
     f.moves[1] = {"Magical Attack", MoveKind::MagAttack, 12, 5};
@@ -32,6 +32,7 @@ Fighter naturalScience(){
     f.defBuff= 0;
 
     f.baseAtk = 12; f.baseDef = 8; f.baseSpd = 9;
+    f.baseIntel = 14; f.baseHP = 110;
 
     f.moves[0] = {"Physical Attack", MoveKind::Attack, 16,10};
     f.moves[1] = {"Magical Attack", MoveKind::MagAttack, 18, 15};
@@ -48,7 +49,7 @@ Fighter education(){
     f.defBuff= 0;
 
     f.baseAtk = 10; f.baseDef = 6; f.baseSpd = 8;
-
+    f.baseIntel = 16; f.baseHP = 100;
     f.moves[0] = {"Physical Attack", MoveKind::Attack, 14,10};
     f.moves[1] = {"Magical Attack", MoveKind::MagAttack, 20, 15};
     f.moves[2] = {"Block", MoveKind::Defend, 4, 0};
@@ -64,7 +65,7 @@ Fighter computing_and_information(const std::string& playerName){
     f.atk = 14; f.intel = 12; f.def = 10; f.spd = 7;
     f.defBuff= 0;
 
-    f.baseAtk = 14; f.baseDef = 10; f.baseSpd = 7;
+    f.baseAtk = 14; f.baseDef = 10; f.baseSpd = 7; f.baseIntel = 12; f.baseHP = 120;
 
     f.moves[0] = {"Physical Attack", MoveKind::Attack, 18,10};
     f.moves[1] = {"Magical Attack", MoveKind::Attack, 14, 10};

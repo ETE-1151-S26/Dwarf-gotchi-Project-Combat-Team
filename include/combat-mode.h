@@ -2,7 +2,8 @@
 #define COMBAT_MODE_H
 #include <string>
 #include <iostream>
-#include "major-stats.h"
+
+struct Fighter;
 
 //Defines the combat modes the player can be in
 enum class CombatMode{
@@ -22,5 +23,7 @@ class ModeManager{
         //Modifies the 
         void applyMode(Fighter& f, CombatMode mode);
 };  
+
+void selectCombatMode(Fighter& f);
 
 #endif

@@ -3,6 +3,7 @@
 #include <string>
 #include "battle-logic.h"
 #include "major-stats.h"
+#include "combat-mode.h"
 
 int main() {
 
