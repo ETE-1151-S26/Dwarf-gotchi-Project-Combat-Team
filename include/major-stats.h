@@ -20,6 +20,9 @@ struct Fighter {
 	std::string name;
 	std::string className;
 
+	int level;
+	int exp;
+
 	int maxHP;
 	int hp;
 	int atk; //str value
